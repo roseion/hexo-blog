@@ -1,0 +1,3164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steam 夏季特卖 史低游戏汇总 - 2026年6月26日</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;900&family=Inter:wght@400;500;600;700;800&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --new-low-badge: #FF3B30;
+  --new-low-glow: rgba(255, 59, 48, 0.6);
+  --equal-low-badge: #30D158;
+  --equal-low-glow: rgba(48, 209, 88, 0.5);
+  --card-bg: rgba(18, 18, 22, 0.92);
+  --text-primary: #FFFFFF;
+  --text-secondary: #B0B0C0;
+  --text-muted: #6E6E80;
+  --gradient-1: linear-gradient(135deg, #FF6B35 0%, #FF3B30 50%, #D4145A 100%);
+  --gradient-2: linear-gradient(135deg, #00B4DB 0%, #0083B0 100%);
+}
+
+body {
+  font-family: 'Noto Sans SC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0a0a10;
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(138, 43, 226, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(255, 59, 48, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(0, 180, 219, 0.08) 0%, transparent 60%);
+  min-height: 100vh;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.header {
+  text-align: center;
+  padding: 60px 20px 40px;
+  position: relative;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: var(--gradient-1);
+  border-radius: 2px;
+}
+
+.header h1 {
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 900;
+  letter-spacing: -1px;
+  background: linear-gradient(135deg, #FF6B35, #FF3B30, #D4145A, #8E2DE2);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientFlow 6s ease infinite;
+  margin-bottom: 12px;
+}
+
+@keyframes gradientFlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.header p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.header .update-time {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 20px 0 32px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.legend-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.legend-dot.new-low { background: var(--new-low-badge); box-shadow: 0 0 12px var(--new-low-glow); }
+.legend-dot.equal-low { background: var(--equal-low-badge); box-shadow: 0 0 12px var(--equal-low-glow); }
+
+.section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px 32px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 24px;
+  padding-left: 16px;
+  border-left: 5px solid;
+  line-height: 1.2;
+}
+
+.section-title.new-low {
+  color: #FF3B30;
+  border-color: #FF3B30;
+}
+
+.section-title.equal-low {
+  color: #30D158;
+  border-color: #30D158;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 22px;
+  padding-bottom: 40px;
+}
+
+.game-card {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.35s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.game-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.5), 0 0 32px rgba(138,43,226,0.15);
+}
+
+.card-header-img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.game-card:hover .card-header-img {
+  transform: scale(1.05);
+}
+
+.card-header-fallback {
+  width: 100%;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 2px;
+}
+
+.card-body {
+  padding: 18px 18px 22px;
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -15px;
+  right: 18px;
+  padding: 5px 13px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  z-index: 2;
+}
+
+.badge.new-low {
+  background: var(--gradient-1);
+  color: #FFF;
+  box-shadow: 0 4px 20px var(--new-low-glow);
+}
+
+.badge.equal-low {
+  background: var(--gradient-2);
+  color: #FFF;
+  box-shadow: 0 4px 20px var(--equal-low-glow);
+}
+
+.game-name {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 2px;
+  letter-spacing: -0.3px;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.game-name-en {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  letter-spacing: 0.2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.current-price {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #FFD60A;
+  line-height: 1;
+}
+
+.original-price {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+.discount-badge {
+  font-size: 12px;
+  font-weight: 800;
+  padding: 2px 9px;
+  border-radius: 8px;
+  background: rgba(255,59,48,0.2);
+  color: #FF6B6B;
+  letter-spacing: 0.5px;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.historic-low {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.historic-low span {
+  color: #30D158;
+  font-weight: 700;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #FFD60A;
+}
+
+.store-link-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  padding: 7px 14px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #66B3FF;
+  transition: all 0.25s ease;
+  width: 100%;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.store-link-icon:hover {
+  background: rgba(102,179,255,0.15);
+  color: #99CCFF;
+}
+
+.store-link-icon svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(0,0,0,0.35) 70%,
+    rgba(0,0,0,0.82) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.card-header-wrap {
+  position: relative;
+}
+
+.stats-bar {
+  max-width: 1400px;
+  margin: 0 auto 8px;
+  padding: 0 24px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-num {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.stat-num.new { color: #FF6B6B; }
+.stat-num.equal { color: #30D158; }
+.stat-num.total { color: #B0B0C0; }
+
+.stat-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.footer {
+  text-align: center;
+  padding: 40px 20px 60px;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.footer a {
+  color: #66B3FF;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 16px;
+  }
+  .header { padding: 40px 16px 28px; }
+  .section { padding: 0 12px 24px; }
+  .game-name { font-size: 15px; }
+  .current-price { font-size: 24px; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Steam 夏季特卖 · 史低游戏汇总</h1>
+  <p>2026 夏促精选 · 突破史低 + 持平史低 · 全量 TOP 100</p>
+  <div class="update-time">数据采集于 2026-06-26 · 来源 yxdzqb / Steam 夏促资讯</div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-num new">29</div>
+    <div class="stat-label">突破历史低价</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num equal">71</div>
+    <div class="stat-label">持平历史低价</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num total">100</div>
+    <div class="stat-label">合计展示</div>
+  </div>
+</div>
+
+<div class="legend">
+  <div class="legend-item">
+    <div class="legend-dot new-low"></div>
+    <span>突破历史低价</span>
+  </div>
+  <div class="legend-item">
+    <div class="legend-dot equal-low"></div>
+    <span>持平历史低价</span>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title new-low">🔥 突破历史低价</div>
+  <div class="card-grid">
+
+    <a class="game-card" href="https://store.steampowered.com/app/454650/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/454650/header.jpg" 
+             alt="龙珠超宇宙2" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#16213e">龙</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">龙珠超宇宙2</div>
+        <div class="game-name-en">DRAGON BALL XENOVERSE 2</div>
+        <div class="price-row">
+          <span class="current-price">¥10</span>
+          <span class="original-price">¥268</span>
+          <span class="discount-badge">-96%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥10</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/447040/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/447040/header.jpg" 
+             alt="看门狗2" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1c2541">看</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">看门狗2</div>
+        <div class="game-name-en">Watch Dogs 2</div>
+        <div class="price-row">
+          <span class="current-price">¥15</span>
+          <span class="original-price">¥208</span>
+          <span class="discount-badge">-95%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥15</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/286690/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/286690/header.jpg" 
+             alt="地铁2033 重制版" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1c2541">地</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">地铁2033 重制版</div>
+        <div class="game-name-en">Metro 2033 Redux</div>
+        <div class="price-row">
+          <span class="current-price">¥5</span>
+          <span class="original-price">¥98</span>
+          <span class="discount-badge">-95%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥5</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/1222140/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1222140/header.jpg" 
+             alt="底特律：化身为人" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1a1a2e">底</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">底特律：化身为人</div>
+        <div class="game-name-en">Detroit: Become Human</div>
+        <div class="price-row">
+          <span class="current-price">¥14</span>
+          <span class="original-price">¥199</span>
+          <span class="discount-badge">-93%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥14</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/292030/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/292030/header.jpg" 
+             alt="巫师3：狂猎 完全版" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#0f3460">巫</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">巫师3：狂猎 完全版</div>
+        <div class="game-name-en">The Witcher 3: Wild Hunt</div>
+        <div class="price-row">
+          <span class="current-price">¥15</span>
+          <span class="original-price">¥199</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥15</span></div>
+          <div class="rating">★★★★ 97%</div>
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/250900/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/250900/header.jpg" 
+             alt="The Binding of Isaac: Rebirth" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1e1e30">T</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">The Binding of Isaac: Rebirth</div>
+        <div class="game-name-en">The Binding of Isaac: Rebirth</div>
+        <div class="price-row">
+          <span class="current-price">¥5</span>
+          <span class="original-price">¥48</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥5</span></div>
+          <div class="rating">★★★★ 97%</div>
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/1693980/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1693980/header.jpg" 
+             alt="死亡空间 重制版" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1b1b2f">死</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">死亡空间 重制版</div>
+        <div class="game-name-en">Dead Space (2023)</div>
+        <div class="price-row">
+          <span class="current-price">¥25</span>
+          <span class="original-price">¥248</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥25</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/752590/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/752590/header.jpg" 
+             alt="瘟疫传说：无罪" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#16213e">瘟</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">瘟疫传说：无罪</div>
+        <div class="game-name-en">A Plague Tale: Innocence</div>
+        <div class="price-row">
+          <span class="current-price">¥17</span>
+          <span class="original-price">¥169</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥17</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/298110/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/298110/header.jpg" 
+             alt="孤岛惊魂4" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#2d1b3e">孤</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">孤岛惊魂4</div>
+        <div class="game-name-en">Far Cry 4</div>
+        <div class="price-row">
+          <span class="current-price">¥15</span>
+          <span class="original-price">¥148</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥15</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/1937780/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1937780/header.jpg" 
+             alt="使命召唤：现代战争2 2022" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1e1e30">使</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">使命召唤：现代战争2 2022</div>
+        <div class="game-name-en">Call of Duty: Modern Warfare II</div>
+        <div class="price-row">
+          <span class="current-price">¥45</span>
+          <span class="original-price">¥446</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥45</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/412020/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/412020/header.jpg" 
+             alt="地铁：离去" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#2d1b3e">地</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">地铁：离去</div>
+        <div class="game-name-en">Metro Exodus</div>
+        <div class="price-row">
+          <span class="current-price">¥20</span>
+          <span class="original-price">¥199</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥20</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/414700/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/414700/header.jpg" 
+             alt="逃生2" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1a1a2e">逃</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">逃生2</div>
+        <div class="game-name-en">Outlast 2</div>
+        <div class="price-row">
+          <span class="current-price">¥9</span>
+          <span class="original-price">¥90</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥9</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/883710/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/883710/header.jpg" 
+             alt="生化危机2 重制版" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1a1a2e">生</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">生化危机2 重制版</div>
+        <div class="game-name-en">Resident Evil 2</div>
+        <div class="price-row">
+          <span class="current-price">¥40</span>
+          <span class="original-price">¥198</span>
+          <span class="discount-badge">-80%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥40</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/1426210/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1426210/header.jpg" 
+             alt="双人成行" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1a1a40">双</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">双人成行</div>
+        <div class="game-name-en">It Takes Two</div>
+        <div class="price-row">
+          <span class="current-price">¥40</span>
+          <span class="original-price">¥198</span>
+          <span class="discount-badge">-80%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥40</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/534380/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/534380/header.jpg" 
+             alt="消逝的光芒2 重装上阵版" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1e1e30">消</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">消逝的光芒2 重装上阵版</div>
+        <div class="game-name-en">Dying Light 2 Stay Human: Reloaded Edition</div>
+        <div class="price-row">
+          <span class="current-price">¥40</span>
+          <span class="original-price">¥198</span>
+          <span class="discount-badge">-80%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥40</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/2821320/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2821320/header.jpg" 
+             alt="命运2：传承收藏" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1a1a40">命</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">命运2：传承收藏</div>
+        <div class="game-name-en">Destiny 2: Legacy Collection (2024)</div>
+        <div class="price-row">
+          <span class="current-price">¥120</span>
+          <span class="original-price">¥600</span>
+          <span class="discount-badge">-80%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥120</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/1174180/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/header.jpg" 
+             alt="荒野大镖客2" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1e1e30">荒</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">荒野大镖客2</div>
+        <div class="game-name-en">Red Dead Redemption 2</div>
+        <div class="price-row">
+          <span class="current-price">¥70</span>
+          <span class="original-price">¥279</span>
+          <span class="discount-badge">-75%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥70</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/2050650/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2050650/header.jpg" 
+             alt="生化危机4 重制版" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1a1a40">生</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">生化危机4 重制版</div>
+        <div class="game-name-en">Resident Evil 4</div>
+        <div class="price-row">
+          <span class="current-price">¥50</span>
+          <span class="original-price">¥198</span>
+          <span class="discount-badge">-75%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥50</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/2138330/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2138330/header.jpg" 
+             alt="赛博朋克2077 往日之影终极版" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1b1b2f">赛</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">赛博朋克2077 往日之影终极版</div>
+        <div class="game-name-en">Cyberpunk 2077: Ultimate Edition</div>
+        <div class="price-row">
+          <span class="current-price">¥104</span>
+          <span class="original-price">¥298</span>
+          <span class="discount-badge">-65%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥104</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/1462040/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1462040/header.jpg" 
+             alt="最终幻想7：重制版" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#16213e">最</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">最终幻想7：重制版</div>
+        <div class="game-name-en">FINAL FANTASY VII REMAKE INTERGRADE</div>
+        <div class="price-row">
+          <span class="current-price">¥69</span>
+          <span class="original-price">¥446</span>
+          <span class="discount-badge">-65%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥69</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/261550/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/261550/header.jpg" 
+             alt="骑马与砍杀2：霸主" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1c2541">骑</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">骑马与砍杀2：霸主</div>
+        <div class="game-name-en">Mount & Blade II: Bannerlord</div>
+        <div class="price-row">
+          <span class="current-price">¥99</span>
+          <span class="original-price">¥248</span>
+          <span class="discount-badge">-60%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥99</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/814380/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/814380/header.jpg" 
+             alt="只狼：影逝二度" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#0f3460">只</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">只狼：影逝二度</div>
+        <div class="game-name-en">Sekiro: Shadows Die Twice</div>
+        <div class="price-row">
+          <span class="current-price">¥134</span>
+          <span class="original-price">¥268</span>
+          <span class="discount-badge">-50%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥134</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/1551360/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1551360/header.jpg" 
+             alt="极限竞速：地平线5" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#16213e">极</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">极限竞速：地平线5</div>
+        <div class="game-name-en">Forza Horizon 5</div>
+        <div class="price-row">
+          <span class="current-price">¥99</span>
+          <span class="original-price">¥248</span>
+          <span class="discount-badge">-50%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥99</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/1868140/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1868140/header.jpg" 
+             alt="潜水员戴夫" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#0f3460">潜</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">潜水员戴夫</div>
+        <div class="game-name-en">DAVE THE DIVER</div>
+        <div class="price-row">
+          <span class="current-price">¥40</span>
+          <span class="original-price">¥80</span>
+          <span class="discount-badge">-50%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥40</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/2001120/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2001120/header.jpg" 
+             alt="双影奇境" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1b1b2f">双</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">双影奇境</div>
+        <div class="game-name-en">Split Fiction</div>
+        <div class="price-row">
+          <span class="current-price">¥129</span>
+          <span class="original-price">¥198</span>
+          <span class="discount-badge">-35%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥129</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/2322010/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2322010/header.jpg" 
+             alt="战神：诸神黄昏" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1e1e30">战</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">战神：诸神黄昏</div>
+        <div class="game-name-en">God of War Ragnarök</div>
+        <div class="price-row">
+          <span class="current-price">¥267</span>
+          <span class="original-price">¥345</span>
+          <span class="discount-badge">-33%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥267</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/2358720/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2358720/header.jpg" 
+             alt="黑神话：悟空" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#2d1b3e">黑</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">黑神话：悟空</div>
+        <div class="game-name-en">Black Myth: Wukong</div>
+        <div class="price-row">
+          <span class="current-price">¥198</span>
+          <span class="original-price">¥268</span>
+          <span class="discount-badge">-30%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥198</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/3219030/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/3219030/header.jpg" 
+             alt="逃出鸭科夫" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1e1e30">逃</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">逃出鸭科夫</div>
+        <div class="game-name-en">Escape from Duckov</div>
+        <div class="price-row">
+          <span class="current-price">¥15</span>
+          <span class="original-price">¥20</span>
+          <span class="discount-badge">-25%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥15</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/1716740/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1716740/header.jpg" 
+             alt="星空" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1e1e30">星</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge new-low">新史低</div>
+        <div class="game-name">星空</div>
+        <div class="game-name-en">Starfield</div>
+        <div class="price-row">
+          <span class="current-price">¥167</span>
+          <span class="original-price">¥209</span>
+          <span class="discount-badge">-20%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥167</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title equal-low">✓ 持平历史低价</div>
+  <div class="card-grid">
+
+    <a class="game-card" href="https://store.steampowered.com/app/528660/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/528660/header.jpg" 
+             alt="Spin Rush" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#0f3460">S</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">Spin Rush</div>
+        <div class="game-name-en">Spin Rush</div>
+        <div class="price-row">
+          <span class="current-price">¥6</span>
+          <span class="original-price">¥108</span>
+          <span class="discount-badge">-95%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥3</span></div>
+          <div class="rating">★★★ 79%</div>
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/434250/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/434250/header.jpg" 
+             alt="Masked Shooters 2" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#2d1b3e">M</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">Masked Shooters 2</div>
+        <div class="game-name-en">Masked Shooters 2</div>
+        <div class="price-row">
+          <span class="current-price">¥6</span>
+          <span class="original-price">¥108</span>
+          <span class="discount-badge">-95%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥3</span></div>
+          <div class="rating">★★★ 74%</div>
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/567280/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/567280/header.jpg" 
+             alt="Cube Runner" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1a1a2e">C</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">Cube Runner</div>
+        <div class="game-name-en">Cube Runner</div>
+        <div class="price-row">
+          <span class="current-price">¥7</span>
+          <span class="original-price">¥136</span>
+          <span class="discount-badge">-95%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥2</span></div>
+          <div class="rating">★★★★ 89%</div>
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/468490/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/468490/header.jpg" 
+             alt="Neon Space" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#0f3460">N</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">Neon Space</div>
+        <div class="game-name-en">Neon Space</div>
+        <div class="price-row">
+          <span class="current-price">¥6</span>
+          <span class="original-price">¥108</span>
+          <span class="discount-badge">-95%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥3</span></div>
+          <div class="rating">★★★ 79%</div>
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/583760/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/583760/header.jpg" 
+             alt="Slash It 2" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#2d1b3e">S</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">Slash It 2</div>
+        <div class="game-name-en">Slash It 2</div>
+        <div class="price-row">
+          <span class="current-price">¥7</span>
+          <span class="original-price">¥136</span>
+          <span class="discount-badge">-95%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥3</span></div>
+          <div class="rating">★★★★ 93%</div>
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/586960/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/586960/header.jpg" 
+             alt="Upside Down" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#0f3460">U</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">Upside Down</div>
+        <div class="game-name-en">Upside Down</div>
+        <div class="price-row">
+          <span class="current-price">¥6</span>
+          <span class="original-price">¥108</span>
+          <span class="discount-badge">-95%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥3</span></div>
+          <div class="rating">★★★★ 86%</div>
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/343360/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/343360/header.jpg" 
+             alt="Particula" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#16213e">P</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">Particula</div>
+        <div class="game-name-en">Particula</div>
+        <div class="price-row">
+          <span class="current-price">¥6</span>
+          <span class="original-price">¥108</span>
+          <span class="discount-badge">-95%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥2</span></div>
+          <div class="rating">★★★ 66%</div>
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/287390/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/287390/header.jpg" 
+             alt="地铁：最后的曙光 重制版" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1b1b2f">地</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">地铁：最后的曙光 重制版</div>
+        <div class="game-name-en">Metro: Last Light Redux</div>
+        <div class="price-row">
+          <span class="current-price">¥5</span>
+          <span class="original-price">¥98</span>
+          <span class="discount-badge">-95%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥5</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/468920/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/468920/header.jpg" 
+             alt="Ultimate Fishing Simulator®" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#16213e">U</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">Ultimate Fishing Simulator®</div>
+        <div class="game-name-en">Ultimate Fishing Simulator®</div>
+        <div class="price-row">
+          <span class="current-price">¥5</span>
+          <span class="original-price">¥76</span>
+          <span class="discount-badge">-94%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥4</span></div>
+          <div class="rating">★★★ 69%</div>
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/616560/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/616560/header.jpg" 
+             alt="Ultimate Epic Battle Simulator" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1a1a2e">U</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">Ultimate Epic Battle Simulator</div>
+        <div class="game-name-en">Ultimate Epic Battle Simulator</div>
+        <div class="price-row">
+          <span class="current-price">¥4</span>
+          <span class="original-price">¥50</span>
+          <span class="discount-badge">-93%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥4</span></div>
+          <div class="rating">★★★ 71%</div>
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/311010/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/311010/header.jpg" 
+             alt="途" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1a1a2e">途</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">途</div>
+        <div class="game-name-en">The Way</div>
+        <div class="price-row">
+          <span class="current-price">¥5</span>
+          <span class="original-price">¥58</span>
+          <span class="discount-badge">-93%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥4</span></div>
+          <div class="rating">★★★★ 88%</div>
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/201420/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/201420/header.jpg" 
+             alt="Toki Tori 2+" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1c2541">T</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">Toki Tori 2+</div>
+        <div class="game-name-en">Toki Tori 2+</div>
+        <div class="price-row">
+          <span class="current-price">¥4</span>
+          <span class="original-price">¥55</span>
+          <span class="discount-badge">-93%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥2</span></div>
+          <div class="rating">★★★★ 86%</div>
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/384740/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/384740/header.jpg" 
+             alt="CAT Interstellar" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#2d1b3e">C</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">CAT Interstellar</div>
+        <div class="game-name-en">CAT Interstellar</div>
+        <div class="price-row">
+          <span class="current-price">¥4</span>
+          <span class="original-price">¥42</span>
+          <span class="discount-badge">-92%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥3</span></div>
+          <div class="rating">★★★ 70%</div>
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/322330/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/322330/header.jpg" 
+             alt="Don't Starve Together" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#16213e">D</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">Don't Starve Together</div>
+        <div class="game-name-en">Don't Starve Together</div>
+        <div class="price-row">
+          <span class="current-price">¥5</span>
+          <span class="original-price">¥48</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥5</span></div>
+          <div class="rating">★★★★ 96%</div>
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/239140/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/239140/header.jpg" 
+             alt="消逝的光芒" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1a1a2e">消</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">消逝的光芒</div>
+        <div class="game-name-en">Dying Light</div>
+        <div class="price-row">
+          <span class="current-price">¥10</span>
+          <span class="original-price">¥98</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥10</span></div>
+          <div class="rating">★★★★ 92%</div>
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/219150/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/219150/header.jpg" 
+             alt="Hotline Miami" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#2d1b3e">H</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">Hotline Miami</div>
+        <div class="game-name-en">Hotline Miami</div>
+        <div class="price-row">
+          <span class="current-price">¥5</span>
+          <span class="original-price">¥42</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥5</span></div>
+          <div class="rating">★★★★ 97%</div>
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/204360/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/204360/header.jpg" 
+             alt="Castle Crashers®" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#16213e">C</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">Castle Crashers®</div>
+        <div class="game-name-en">Castle Crashers®</div>
+        <div class="price-row">
+          <span class="current-price">¥5</span>
+          <span class="original-price">¥48</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥5</span></div>
+          <div class="rating">★★★★ 96%</div>
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/346010/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/346010/header.jpg" 
+             alt="Besiege" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1e1e30">B</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">Besiege</div>
+        <div class="game-name-en">Besiege</div>
+        <div class="price-row">
+          <span class="current-price">¥6</span>
+          <span class="original-price">¥58</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥6</span></div>
+          <div class="rating">★★★★ 95%</div>
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/241600/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/241600/header.jpg" 
+             alt="Rogue Legacy" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#16213e">R</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">Rogue Legacy</div>
+        <div class="game-name-en">Rogue Legacy</div>
+        <div class="price-row">
+          <span class="current-price">¥6</span>
+          <span class="original-price">¥58</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥6</span></div>
+          <div class="rating">★★★★ 93%</div>
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/812140/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/812140/header.jpg" 
+             alt="刺客信条：奥德赛" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#2d1b3e">刺</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">刺客信条：奥德赛</div>
+        <div class="game-name-en">Assassin's Creed Odyssey</div>
+        <div class="price-row">
+          <span class="current-price">¥30</span>
+          <span class="original-price">¥298</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥30</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/582160/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/582160/header.jpg" 
+             alt="刺客信条：起源" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1a1a40">刺</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">刺客信条：起源</div>
+        <div class="game-name-en">Assassin's Creed Origins</div>
+        <div class="price-row">
+          <span class="current-price">¥30</span>
+          <span class="original-price">¥298</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥30</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/552520/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/552520/header.jpg" 
+             alt="孤岛惊魂5" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1c2541">孤</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">孤岛惊魂5</div>
+        <div class="game-name-en">Far Cry 5</div>
+        <div class="price-row">
+          <span class="current-price">¥25</span>
+          <span class="original-price">¥248</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥25</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/782330/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/782330/header.jpg" 
+             alt="毁灭战士：永恒" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#2d1b3e">毁</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">毁灭战士：永恒</div>
+        <div class="game-name-en">DOOM Eternal</div>
+        <div class="price-row">
+          <span class="current-price">¥25</span>
+          <span class="original-price">¥249</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥25</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/397540/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/397540/header.jpg" 
+             alt="无主之地3" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1b1b2f">无</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">无主之地3</div>
+        <div class="game-name-en">Borderlands 3</div>
+        <div class="price-row">
+          <span class="current-price">¥20</span>
+          <span class="original-price">¥199</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥20</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/289070/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/289070/header.jpg" 
+             alt="文明6" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1c2541">文</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">文明6</div>
+        <div class="game-name-en">Sid Meier's Civilization VI</div>
+        <div class="price-row">
+          <span class="current-price">¥20</span>
+          <span class="original-price">¥199</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥20</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/1237970/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1237970/header.jpg" 
+             alt="泰坦陨落2" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#16213e">泰</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">泰坦陨落2</div>
+        <div class="game-name-en">Titanfall 2</div>
+        <div class="price-row">
+          <span class="current-price">¥16</span>
+          <span class="original-price">¥158</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥16</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/1238840/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1238840/header.jpg" 
+             alt="战地1" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1b1b2f">战</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">战地1</div>
+        <div class="game-name-en">Battlefield 1</div>
+        <div class="price-row">
+          <span class="current-price">¥20</span>
+          <span class="original-price">¥198</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥20</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/632470/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/632470/header.jpg" 
+             alt="极乐迪斯科" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1e1e30">极</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">极乐迪斯科</div>
+        <div class="game-name-en">Disco Elysium - The Final Cut</div>
+        <div class="price-row">
+          <span class="current-price">¥12</span>
+          <span class="original-price">¥116</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥12</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/2239550/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2239550/header.jpg" 
+             alt="看门狗：军团" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1e1e30">看</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">看门狗：军团</div>
+        <div class="game-name-en">Watch Dogs: Legion</div>
+        <div class="price-row">
+          <span class="current-price">¥30</span>
+          <span class="original-price">¥298</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥30</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/460930/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/460930/header.jpg" 
+             alt="幽灵行动：荒野" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#0f3460">幽</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">幽灵行动：荒野</div>
+        <div class="game-name-en">Tom Clancy's Ghost Recon Wildlands</div>
+        <div class="price-row">
+          <span class="current-price">¥25</span>
+          <span class="original-price">¥248</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥25</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/939960/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/939960/header.jpg" 
+             alt="孤岛惊魂：新曙光" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#16213e">孤</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">孤岛惊魂：新曙光</div>
+        <div class="game-name-en">Far Cry New Dawn</div>
+        <div class="price-row">
+          <span class="current-price">¥21</span>
+          <span class="original-price">¥208</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥21</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/924970/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/924970/header.jpg" 
+             alt="喋血复仇" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#2d1b3e">喋</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">喋血复仇</div>
+        <div class="game-name-en">Back 4 Blood</div>
+        <div class="price-row">
+          <span class="current-price">¥30</span>
+          <span class="original-price">¥298</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥30</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/694280/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/694280/header.jpg" 
+             alt="僵尸部队4：死亡战争" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#16213e">僵</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">僵尸部队4：死亡战争</div>
+        <div class="game-name-en">Zombie Army 4: Dead War</div>
+        <div class="price-row">
+          <span class="current-price">¥14</span>
+          <span class="original-price">¥138</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥14</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/312660/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/312660/header.jpg" 
+             alt="狙击精英4" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1c2541">狙</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">狙击精英4</div>
+        <div class="game-name-en">Sniper Elite 4</div>
+        <div class="price-row">
+          <span class="current-price">¥16</span>
+          <span class="original-price">¥158</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥16</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/750920/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/750920/header.jpg" 
+             alt="古墓丽影：暗影" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1e1e30">古</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">古墓丽影：暗影</div>
+        <div class="game-name-en">Shadow of the Tomb Raider</div>
+        <div class="price-row">
+          <span class="current-price">¥23</span>
+          <span class="original-price">¥228</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥23</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/391220/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/391220/header.jpg" 
+             alt="古墓丽影：崛起" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1b1b2f">古</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">古墓丽影：崛起</div>
+        <div class="game-name-en">Rise of the Tomb Raider</div>
+        <div class="price-row">
+          <span class="current-price">¥16</span>
+          <span class="original-price">¥160</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥16</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/517630/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/517630/header.jpg" 
+             alt="正当防卫4" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1e1e30">正</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">正当防卫4</div>
+        <div class="game-name-en">Just Cause 4 Reloaded</div>
+        <div class="price-row">
+          <span class="current-price">¥28</span>
+          <span class="original-price">¥279</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥28</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/612880/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/612880/header.jpg" 
+             alt="德军总部2：新巨人" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1a1a40">德</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">德军总部2：新巨人</div>
+        <div class="game-name-en">Wolfenstein II: The New Colossus</div>
+        <div class="price-row">
+          <span class="current-price">¥20</span>
+          <span class="original-price">¥199</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥20</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/480490/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/480490/header.jpg" 
+             alt="掠食" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#16213e">掠</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">掠食</div>
+        <div class="game-name-en">Prey</div>
+        <div class="price-row">
+          <span class="current-price">¥13</span>
+          <span class="original-price">¥129</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥13</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/403640/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/403640/header.jpg" 
+             alt="耻辱2" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#2d1b3e">耻</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">耻辱2</div>
+        <div class="game-name-en">Dishonored 2</div>
+        <div class="price-row">
+          <span class="current-price">¥10</span>
+          <span class="original-price">¥99</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥10</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/205100/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/205100/header.jpg" 
+             alt="耻辱" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1c2541">耻</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">耻辱</div>
+        <div class="game-name-en">Dishonored</div>
+        <div class="price-row">
+          <span class="current-price">¥6</span>
+          <span class="original-price">¥59</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥6</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/601430/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/601430/header.jpg" 
+             alt="恶灵附身2" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1c2541">恶</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">恶灵附身2</div>
+        <div class="game-name-en">The Evil Within 2</div>
+        <div class="price-row">
+          <span class="current-price">¥20</span>
+          <span class="original-price">¥199</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥20</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/268050/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/268050/header.jpg" 
+             alt="恶灵附身" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1e1e30">恶</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">恶灵附身</div>
+        <div class="game-name-en">The Evil Within</div>
+        <div class="price-row">
+          <span class="current-price">¥10</span>
+          <span class="original-price">¥99</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥10</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/262060/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/262060/header.jpg" 
+             alt="暗黑地牢" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1e1e30">暗</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">暗黑地牢</div>
+        <div class="game-name-en">Darkest Dungeon</div>
+        <div class="price-row">
+          <span class="current-price">¥8</span>
+          <span class="original-price">¥78</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥8</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/504230/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/504230/header.jpg" 
+             alt="蔚蓝" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#2d1b3e">蔚</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">蔚蓝</div>
+        <div class="game-name-en">Celeste</div>
+        <div class="price-row">
+          <span class="current-price">¥7</span>
+          <span class="original-price">¥68</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥7</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/323190/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/323190/header.jpg" 
+             alt="冰汽时代" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1e1e30">冰</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">冰汽时代</div>
+        <div class="game-name-en">Frostpunk</div>
+        <div class="price-row">
+          <span class="current-price">¥10</span>
+          <span class="original-price">¥99</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥10</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/282070/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/282070/header.jpg" 
+             alt="这是我的战争" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1a1a2e">这</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">这是我的战争</div>
+        <div class="game-name-en">This War of Mine</div>
+        <div class="price-row">
+          <span class="current-price">¥7</span>
+          <span class="original-price">¥68</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥7</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/238320/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/238320/header.jpg" 
+             alt="逃生" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1a1a40">逃</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">逃生</div>
+        <div class="game-name-en">Outlast</div>
+        <div class="price-row">
+          <span class="current-price">¥7</span>
+          <span class="original-price">¥70</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥7</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/319630/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/319630/header.jpg" 
+             alt="奇异人生" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1b1b2f">奇</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">奇异人生</div>
+        <div class="game-name-en">Life is Strange - Episode 1</div>
+        <div class="price-row">
+          <span class="current-price">¥7</span>
+          <span class="original-price">¥68</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥7</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/414340/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/414340/header.jpg" 
+             alt="地狱之刃：塞娜的献祭" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#2d1b3e">地</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">地狱之刃：塞娜的献祭</div>
+        <div class="game-name-en">Hellblade: Senua's Sacrifice</div>
+        <div class="price-row">
+          <span class="current-price">¥9</span>
+          <span class="original-price">¥88</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥9</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/208650/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/208650/header.jpg" 
+             alt="蝙蝠侠：阿卡姆骑士" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#16213e">蝙</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">蝙蝠侠：阿卡姆骑士</div>
+        <div class="game-name-en">Batman: Arkham Knight</div>
+        <div class="price-row">
+          <span class="current-price">¥7</span>
+          <span class="original-price">¥68</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥7</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/356190/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/356190/header.jpg" 
+             alt="中土世界：战争之影" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1e1e30">中</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">中土世界：战争之影</div>
+        <div class="game-name-en">Middle-earth: Shadow of War</div>
+        <div class="price-row">
+          <span class="current-price">¥14</span>
+          <span class="original-price">¥143</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥14</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/976310/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/976310/header.jpg" 
+             alt="真人快打11" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1e1e30">真</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">真人快打11</div>
+        <div class="game-name-en">Mortal Kombat 11</div>
+        <div class="price-row">
+          <span class="current-price">¥14</span>
+          <span class="original-price">¥138</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥14</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/627270/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/627270/header.jpg" 
+             alt="不义联盟2" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1c2541">不</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">不义联盟2</div>
+        <div class="game-name-en">Injustice 2</div>
+        <div class="price-row">
+          <span class="current-price">¥14</span>
+          <span class="original-price">¥138</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥14</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/379430/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/379430/header.jpg" 
+             alt="天国：拯救" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1a1a40">天</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">天国：拯救</div>
+        <div class="game-name-en">Kingdom Come: Deliverance</div>
+        <div class="price-row">
+          <span class="current-price">¥9</span>
+          <span class="original-price">¥90</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥9</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/48700/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/48700/header.jpg" 
+             alt="骑马与砍杀：战团" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1a1a40">骑</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">骑马与砍杀：战团</div>
+        <div class="game-name-en">Mount & Blade: Warband</div>
+        <div class="price-row">
+          <span class="current-price">¥10</span>
+          <span class="original-price">¥99</span>
+          <span class="discount-badge">-90%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥10</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/248820/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/248820/header.jpg" 
+             alt="雨中冒险" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#0f3460">雨</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">雨中冒险</div>
+        <div class="game-name-en">Risk of Rain</div>
+        <div class="price-row">
+          <span class="current-price">¥4</span>
+          <span class="original-price">¥36</span>
+          <span class="discount-badge">-89%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥4</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/418370/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/418370/header.jpg" 
+             alt="生化危机7" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1b1b2f">生</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">生化危机7</div>
+        <div class="game-name-en">Resident Evil 7 Biohazard</div>
+        <div class="price-row">
+          <span class="current-price">¥20</span>
+          <span class="original-price">¥142</span>
+          <span class="discount-badge">-86%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥20</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/274170/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/274170/header.jpg" 
+             alt="Hotline Miami 2: Wrong Number" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#16213e">H</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">Hotline Miami 2: Wrong Number</div>
+        <div class="game-name-en">Hotline Miami 2: Wrong Number</div>
+        <div class="price-row">
+          <span class="current-price">¥9</span>
+          <span class="original-price">¥58</span>
+          <span class="discount-badge">-85%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥9</span></div>
+          <div class="rating">★★★★ 91%</div>
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/485510/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/485510/header.jpg" 
+             alt="仁王" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1a1a40">仁</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">仁王</div>
+        <div class="game-name-en">Nioh: Complete Edition</div>
+        <div class="price-row">
+          <span class="current-price">¥37</span>
+          <span class="original-price">¥249</span>
+          <span class="discount-badge">-85%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥37</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/1029690/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1029690/header.jpg" 
+             alt="狙击精英5" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1e1e30">狙</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">狙击精英5</div>
+        <div class="game-name-en">Sniper Elite 5</div>
+        <div class="price-row">
+          <span class="current-price">¥30</span>
+          <span class="original-price">¥199</span>
+          <span class="discount-badge">-85%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥30</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/359550/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/359550/header.jpg" 
+             alt="彩虹六号：围攻" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#16213e">彩</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">彩虹六号：围攻</div>
+        <div class="game-name-en">Tom Clancy's Rainbow Six Siege</div>
+        <div class="price-row">
+          <span class="current-price">¥15</span>
+          <span class="original-price">¥88</span>
+          <span class="discount-badge">-83%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥15</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/728880/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/728880/header.jpg" 
+             alt="胡闹厨房2" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#2d1b3e">胡</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">胡闹厨房2</div>
+        <div class="game-name-en">Overcooked! 2</div>
+        <div class="price-row">
+          <span class="current-price">¥15</span>
+          <span class="original-price">¥90</span>
+          <span class="discount-badge">-83%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥15</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/620/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/620/header.jpg" 
+             alt="Portal 2" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1a1a40">P</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">Portal 2</div>
+        <div class="game-name-en">Portal 2</div>
+        <div class="price-row">
+          <span class="current-price">¥9</span>
+          <span class="original-price">¥42</span>
+          <span class="discount-badge">-80%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥3</span></div>
+          <div class="rating">★★★★ 98%</div>
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/582010/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/582010/header.jpg" 
+             alt="怪物猎人：世界" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#0f3460">怪</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">怪物猎人：世界</div>
+        <div class="game-name-en">Monster Hunter: World</div>
+        <div class="price-row">
+          <span class="current-price">¥40</span>
+          <span class="original-price">¥203</span>
+          <span class="discount-badge">-80%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥40</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/524220/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/524220/header.jpg" 
+             alt="尼尔：机械纪元" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1b1b2f">尼</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">尼尔：机械纪元</div>
+        <div class="game-name-en">NieR:Automata</div>
+        <div class="price-row">
+          <span class="current-price">¥55</span>
+          <span class="original-price">¥274</span>
+          <span class="discount-badge">-80%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥55</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/1325200/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1325200/header.jpg" 
+             alt="仁王2" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#2d1b3e">仁</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">仁王2</div>
+        <div class="game-name-en">Nioh 2 – The Complete Edition</div>
+        <div class="price-row">
+          <span class="current-price">¥50</span>
+          <span class="original-price">¥249</span>
+          <span class="discount-badge">-80%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥50</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/1196590/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1196590/header.jpg" 
+             alt="生化危机：村庄" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#2d1b3e">生</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">生化危机：村庄</div>
+        <div class="game-name-en">Resident Evil Village</div>
+        <div class="price-row">
+          <span class="current-price">¥40</span>
+          <span class="original-price">¥198</span>
+          <span class="discount-badge">-80%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥40</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/242760/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/242760/header.jpg" 
+             alt="The Forest" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1c2541">T</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">The Forest</div>
+        <div class="game-name-en">The Forest</div>
+        <div class="price-row">
+          <span class="current-price">¥16</span>
+          <span class="original-price">¥70</span>
+          <span class="discount-badge">-78%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥7</span></div>
+          <div class="rating">★★★★ 92%</div>
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/548430/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/548430/header.jpg" 
+             alt="深岩银河" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#1e1e30">深</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">深岩银河</div>
+        <div class="game-name-en">Deep Rock Galactic</div>
+        <div class="price-row">
+          <span class="current-price">¥20</span>
+          <span class="original-price">¥90</span>
+          <span class="discount-badge">-78%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥20</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+    <a class="game-card" href="https://store.steampowered.com/app/255710/" target="_blank" rel="noopener">
+      <div class="card-header-wrap">
+        <img class="card-header-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/255710/header.jpg" 
+             alt="城市：天际线" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="card-header-fallback" style="display:none;background:#2d1b3e">城</div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <div class="badge equal-low">持平史低</div>
+        <div class="game-name">城市：天际线</div>
+        <div class="game-name-en">Cities: Skylines</div>
+        <div class="price-row">
+          <span class="current-price">¥20</span>
+          <span class="original-price">¥88</span>
+          <span class="discount-badge">-77%</span>
+        </div>
+        <div class="meta-row">
+          <div class="historic-low">史低 <span>¥20</span></div>
+          
+        </div>
+        <div class="store-link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          前往 Steam 商店
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="footer">
+  <p>数据来源 <a href="https://yxdzqb.com" target="_blank">游戏打折情报 (yxdzqb.com)</a> · 中关村在线 · 新浪电竞 · 游侠网</p>
+  <p style="margin-top:8px;">Steam 夏季特卖 6月26日 - 7月10日 · 价格可能随时变动，请以 Steam 商店实际价格为准</p>
+</div>
+
+</body>
+</html>
